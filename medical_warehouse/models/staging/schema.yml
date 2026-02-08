@@ -5,6 +5,7 @@ sources:
     schema: raw
     tables:
       - name: telegram_messages
+<<<<<<< HEAD
         description: "Raw telegram messages loaded from JSON lake into Postgres."
 
 models:
@@ -20,3 +21,23 @@ models:
       - name: message_ts
         description: "Timestamp (UTC-aware)."
         tests: [not_null]
+=======
+        description: "Raw telegram messages loaded from JSON data lake."
+      - name: yolo_detections
+        description: "Raw YOLO detections loaded from CSV."
+
+models:
+  - name: stg_telegram_messages
+    description: "Cleaned and standardized Telegram messages for analytics."
+    columns:
+      - name: message_id
+        description: "Unique message identifier from Telegram."
+        tests: [unique, not_null]
+      - name: channel_name
+        description: "Telegram channel username/name."
+        tests: [not_null]
+      - name: message_ts
+        description: "Message timestamp."
+        tests: [not_null]
+      
+>>>>>>> f514872 (final and updated)

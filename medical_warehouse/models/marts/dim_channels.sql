@@ -1,10 +1,17 @@
 with base as (
     select
         channel_name,
+<<<<<<< HEAD
         min(message_date) as first_post_date,
         max(message_date) as last_post_date,
         count(*) as total_posts,
         avg(view_count)::numeric(18,2) as avg_views
+=======
+        min(message_ts)::date as first_post_date,
+        max(message_ts)::date as last_post_date,
+        count(*) as total_posts,
+        avg(view_count)::numeric(12,2) as avg_views
+>>>>>>> f514872 (final and updated)
     from {{ ref('stg_telegram_messages') }}
     group by 1
 ),
@@ -32,4 +39,8 @@ select
     last_post_date,
     total_posts,
     avg_views
+<<<<<<< HEAD
 from typed;
+=======
+from typed
+>>>>>>> f514872 (final and updated)
