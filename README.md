@@ -68,11 +68,4 @@ After these steps, your project will have:
 
 ➡️ That directly addresses **every line of the feedback**.
 
----
 
-If you want, next I can:
-- Review your **README.md wording**
-- Help you choose **exact screenshots** for final submission
-- Do a **final grading checklist** (what graders look for line-by-line)
-
-Just tell me 👍
